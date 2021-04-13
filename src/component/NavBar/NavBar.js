@@ -26,8 +26,6 @@ function Barra() {
                 </Nav>
                 <Nav>
 
-                
-
                     <Nav.Link  href="#deets">More deets</Nav.Link>
                   
 
