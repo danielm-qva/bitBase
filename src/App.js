@@ -8,7 +8,7 @@ function App() {
     <div>
 
       <Barra />
-      <Jumbotron  fluid>
+      <Jumbotron className="backColor" fluid>
         <Container>
           <h1>Fluid jumbotron</h1>
           <p>
