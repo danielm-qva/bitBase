@@ -7,15 +7,8 @@ import logo from './logo.svg';
 import * as Icon from 'react-bootstrap-icons';
 
 function Barra() {
-    
-    function ControlledCarousel() {
-        const [index, setIndex] = useState(0);
-      
-        const handleSelect = (selectedIndex, e) => {
-          setIndex(selectedIndex);
-        };
-      
-    
+
+
     return (
 
 
@@ -23,30 +16,7 @@ function Barra() {
 
             <Row className="top1">
 
-                <Col sm className="">
-                    <Row>
-                        <Col >
-                            <stong>Tether</stong>
-
-                        </Col>
-                        <Col sm>3 of 3</Col>
-                    </Row>
-                </Col>|
-
-                 <Col sm>
-                    <Row>
-                        <Col sm> <p>BitCoin</p></Col>
-                        <Col sm>3 of 3</Col>
-                    </Row>
-                </Col> |
-
-                 <Col sm className="col-margin">
-                    <Row>
-                    <Col sm className="text-center">3 of 3</Col>
-                        <Col sm className="text-center">3 of 3</Col>
-                    </Row>
-                </Col> |
-
+              <Col><p className="text-center">Carusel</p></Col>
 
             </Row>
 
