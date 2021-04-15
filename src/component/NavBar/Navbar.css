@@ -1,0 +1,51 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+Button {
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+    border-radius: 10px !important;
+    height: 110% !important;
+    color: white !important;
+}
+
+
+.line {
+    background-color: white !important;
+    color: black !important;
+    border-color: rgba(107, 118, 117, 0.138) !important;
+}
+
+.line:focus {
+    box-shadow: 2px 2px 2px 2px #888888 !important;
+}
+
+.imagen {
+    background-color: black !important;
+    
+}
+
+.link {
+    color: black !important;
+    margin-left: 16px !important;
+   
+}
+
+
+.exchange {
+    color:#FFC300  !important;
+    margin-left: 16px !important;
+}
+
+.top{
+    margin-top: 19px !important;
+    margin-bottom: 19px !important;
+}
+.top1{
+    margin-top: 8px !important;
+}
+
+.col-margin{
+     margin-left: 50px !important;
+}
