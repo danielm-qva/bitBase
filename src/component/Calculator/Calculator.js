@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Badge,
     Button,
@@ -30,7 +30,7 @@ export default function Calculator() {
     return (
 
         <Container className={'calculator'}>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center mb-4">
                 <Col xs="auto">
                     <div className={'operation-container'}>
                         <Badge as='a' pill className={operation === 'buy' ? 'active' : ''}
@@ -66,7 +66,7 @@ export default function Calculator() {
                                 <FormControl className="no-border"
                                 />
                                 <InputGroup.Append>
-                                    <InputGroup.Text className="no-border">BTC</InputGroup.Text>
+                                    <InputGroup.Text className="no-border">{coin.symbol}</InputGroup.Text>
                                 </InputGroup.Append>
                             </InputGroup>
 
@@ -96,7 +96,8 @@ export default function Calculator() {
             </Row>
             <Row>
                 <Col>
-                    <Button variant="primary" className=" mt-3" block>Comprar {coin}</Button>
+                    <Button variant="primary" className=" mt-3"
+                            block>{operation === 'buy' ? 'Comprar' : 'Vender'} {coin.name}</Button>
                 </Col>
             </Row>
         </Container>
@@ -104,7 +105,7 @@ export default function Calculator() {
 }
 
 function CarouselCoins(props) {
-    const [coin, setCoin] = useState({icon: "", name: 'Bitcoin', symbol: 'BTC'},);
+
     let coins = [
         {icon: "", name: 'Bitcoin', symbol: 'BTC'},
         {icon: "", name: 'Ethereum', symbol: 'ETH'},
@@ -132,19 +133,26 @@ function CarouselCoins(props) {
         {icon: "", name: 'Waves', symbol: 'WAVES'},
 
     ];
+    const [coin, setCoin] = useState(coins[0],);
 
     function updateCoin(currentCoin) {
-        props.setCurrentCoint(currentCoin);
-        setCoin(currentCoin);
+
+        props.setCurrentCoin(currentCoin);
+
     }
+
+    useEffect(() => {
+        updateCoin(coin);
+    },);
 
     let items = [];
     for (let i = 0; i < coins.length / 8; i++) {
         let slice = coins.slice(i * 8, i * 8 + 8);
         slice = slice.map(currentCoin =>
-            <Col xs={3} key={currentCoin.symbol} className={'px-0'}> <Badge as='a' pill
-                                                         className={'coin-pill ' + currentCoin.symbol === coin.symbol ? 'active' : ''}
-                                                         variant="light" onClick={() => updateCoin(currentCoin)}>
+            <Col xs={3} key={currentCoin.symbol} className={'px-0 text-center'}> <Badge as='a' pill
+                                                                                        className={'coin-pill ' + currentCoin.symbol === coin.symbol ? 'active' : ''}
+                                                                                        variant="light"
+                                                                                        onClick={() => setCoin(currentCoin)}>
                 <Cash size={16} color={'black'}/> {currentCoin.symbol}
             </Badge></Col>
         );
