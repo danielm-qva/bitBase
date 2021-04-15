@@ -1,0 +1,74 @@
+.calculator.container {
+    border: 4px var(--main-color) solid;
+    padding: 1rem;
+    margin: 1rem;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+.calculator .operation-container {
+    background-color: #f5f8fb;
+    /*background-color: black;*/
+    padding: 0.25rem;
+    border-radius: 2rem;
+}
+.calculator .operation-container a {
+    color: var(--letter-primary-color);
+    padding: 0.5rem 2rem;
+    font-size: 100% !important;
+}
+.calculator .operation-container a.active {
+    color: var(--main-color);
+    background-color: white;
+}
+.calculator .input-group-text{
+    background-color: white!important;
+    color: var(--letter-secondary-color);
+}
+.calculator .fields-container{
+    border: 2px var(--border-color) solid;
+    border-radius: 8px;
+}
+.btn-change-circular{
+    position: absolute;
+    display: flex;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    color: white!important;
+}
+.calculator .btn-payment .btn{
+    padding: 0.325rem  0.25rem!important;
+}
+.calculator .carousel-control-prev,.calculator .carousel-control-next{
+    width: unset!important;
+
+}
+.calculator .carousel-inner{
+    padding: 0 1rem 2rem!important;
+}
+.calculator .carousel-indicators li{
+    width: 8px!important;
+    height: 8px!important;
+    border-radius: 4px!important;
+    border: 1px var(--secondary-color) solid!important;
+    background-color: var(--secondary-color) !important;
+    opacity: 1!important;
+
+}
+.calculator .carousel-indicators li.active{
+    border-color: var(--main-color)!important;
+    background-color: var(--main-color) !important;
+}
+.calculator .carousel-control-prev, .calculator  .carousel-control-next {
+    bottom: 2rem;
+    opacity: 1!important;
+}
+.calculator  .badge.badge-pill.badge-light{
+    border: 2px var(--border-color) solid;
+
+}

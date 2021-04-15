@@ -1,4 +1,55 @@
-.backColor{
-  background-color: white;
+.backColor {
+    background-color: white;
 
 }
+
+:root {
+    --main-color: #ff9c14;
+    --secondary-color: #f5f8fb;
+    --border-color: #edf1f8;
+    --letter-primary-color: #293149;
+    --letter-secondary-color: #d2d8e1;
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important;
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--letter-primary-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff !important;
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+}
+
+.no-border {
+    border: none !important;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
+
+.no-border:focus {
+    box-shadow: none !important;
+}
+
+

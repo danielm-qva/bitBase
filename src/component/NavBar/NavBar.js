@@ -3,7 +3,10 @@ import React from 'react';
 
 import { Navbar, NavDropdown, Nav, Image } from 'react-bootstrap';
 import logo from './logo.svg';
+import {
 
+    Link
+} from "react-router-dom";
 function Barra() {
 
 
@@ -16,6 +19,7 @@ function Barra() {
                     <Nav.Link href="#features">Features</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
 
+                    <Link to="/calculator" className={"nav-link"}>TestCalculator</Link>
                     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
