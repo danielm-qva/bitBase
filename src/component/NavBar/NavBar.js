@@ -7,8 +7,15 @@ import logo from './logo.svg';
 import * as Icon from 'react-bootstrap-icons';
 
 function Barra() {
-
-
+    
+    function ControlledCarousel() {
+        const [index, setIndex] = useState(0);
+      
+        const handleSelect = (selectedIndex, e) => {
+          setIndex(selectedIndex);
+        };
+      
+    
     return (
 
 
